@@ -138,5 +138,28 @@ function randomNum(num){
     获取范围随机数(闭区间)
 */
 function randomRange(obj){
-    return Math.floor(Math.random()*(end-start+1))+start;
+    return Math.floor(Math.random()*(obj.end-obj.start+1))+obj.start;
+}
+
+/*
+    事件委托
+*/
+
+function eventDelegation(obj){
+    //获取父元素，添加监听器
+    doc.getElementById(obj.id).addEventListener("click",function(e){
+        //e.target是被点击的元素
+        if(e.target && e.target.nodeName == obj.idOrText){
+            //获取css类名
+            // var classes = e.target.className.split("");
+            // //搜索匹配
+            // if(classes){
+            //     for(var i = 0; i < classes.length; i++){
+            //         if(classes[i] == obj.ySelect){
+            //             //...
+            //         }
+            //     }
+            // }
+        }
+    })
 }
