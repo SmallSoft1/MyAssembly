@@ -1,4 +1,4 @@
-body,html{height: 100%;width: 100%;padding: 0;margin: 0;background: rgb(247,247,247);font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;word-spacing: 5%;overflow-x:hidden}
+body,html{height: 100%;width: 100%;padding: 0;margin: 0;background: rgb(247,247,247);font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif;word-spacing: 5%;overflow-x:hidden;-moz-user-select: none; /*火狐*/-webkit-user-select: none; /*webkit浏览器*/-ms-user-select: none; /*IE10*/ -o-user-select: none; /*早期浏览器*/user-select: none;}
 ul,li{margin: 0;padding: 0;}
 li{list-style: none;}
 input{border: 0;outline: none;}

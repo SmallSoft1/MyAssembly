@@ -1,0 +1,160 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#out_face{
+    width: 200px;
+    height: 200px;
+    padding: 2px;
+    margin: 100px auto;
+    background: #000;
+    border-radius: 50%;
+}
+#in_face{
+    width: 199px;
+    height: 199px;
+    background: #fff;
+    border-radius: 50%;
+}
+#left_ear{
+    width: 55px;
+    height: 55px;
+    background: #000;
+    float: left;
+    border-radius: 50%;
+    transform-origin: bottom right;
+    -webkit-animation: ear 4s infinite ease;
+    -o-animation: ear 4s infinite ease;
+    animation: ear 4s infinite ease;
+}
+#right_ear{
+    width: 55px;
+    height: 55px;
+    background: #000;
+    float: right;
+    border-radius: 50%;
+    transform-origin: bottom left;
+    -webkit-animation: ear 4s infinite ease;
+    -o-animation: ear 4s infinite ease;
+    animation: ear 4s infinite ease;
+}
+@keyframes ear{
+    0%{transform: rotateZ(0deg);}
+    5%{transform: rotateZ(-1deg);}
+    10%{transform: rotateZ(-2deg);}
+    15%{transform: rotateZ(-3deg);}
+    20%{transform: rotateZ(-4deg);}
+    25%{transform: rotateZ(-5deg);}
+    30%{transform: rotateZ(-6deg);}
+    35%{transform: rotateZ(-7deg);}
+    40%{transform: rotateZ(-8deg);}
+    45%{transform: rotateZ(-9deg);}
+    50%{transform: rotateZ(-10deg);}
+    55%{transform: rotateZ(-9deg);}
+    60%{transform: rotateZ(-8deg);}
+    65%{transform: rotateZ(-7deg);}
+    70%{transform: rotateZ(-6deg);}
+    75%{transform: rotateZ(-5deg);}
+    80%{transform: rotateZ(-4deg);}
+    85%{transform: rotateZ(-3deg);}
+    90%{transform: rotateZ(-2deg);}
+    95%{transform: rotateZ(-1deg);}
+    100%{transform: rotateZ(0deg);}
+}
+#left_eye{
+    width: 60px;
+    height: 60px;
+    background: #000;
+    position: relative;
+    top: 80px;
+    left: 30px;
+    transform: rotateY(45deg) rotateX(-15deg);
+    border-radius: 50%;
+}
+#l_e{
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    top: 20px;
+    left: 35px;
+    animation: e 4s infinite linear
+}
+#right_eye{
+    width: 60px;
+    height: 60px;
+    background: #000;
+    position: relative;
+    top: 20px;
+    left: 110px;
+    transform: rotateY(45deg) rotateX(15deg);
+    border-radius: 50%;
+}
+#r_e{
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%; 
+    position: relative;
+    top: 20px;
+    left: 10px;   
+    animation: e 4s infinite linear
+}
+@keyframes e{
+    0%{transform: rotateX(0deg);}
+    25%{transform: rotateX(-20deg);}
+    50%{transform: rotateX(-80deg);}
+    70%{transform: rotateX(-20deg);}
+    100%{transform: rotateX(-0deg);}
+}
+#nose{
+    width: 20px;
+    height: 20px;
+    background: #000;
+    position: relative;
+    top: 20px;
+    left: 90px;
+    transform: rotateX(45deg);
+    border-radius: 50%;
+}
+#mouse{
+    width: 30px;
+    height: 30px;
+    background: red;
+    position: relative;
+    top: 30px;
+    left: 85px;
+    border-radius: 50%;
+    animation: mouse 8s infinite linear;
+}
+@keyframes mouse{
+    0%{transform: rotateY(0deg);}
+    5%{transform: rotateY(-15deg);}
+    10%{transform: rotateY(-30deg);}
+    15%{transform: rotateY(-45deg);}
+    20%{transform: rotateY(-50deg);}
+    25%{transform:rotateY(-45deg);}
+    30%{transform:rotateY(-30deg);}
+    35%{transform:rotateY(-15deg);}
+    40%{transform:rotateY(0deg);}
+    45%{transform:rotateX(0deg);}
+    50%{transform:rotateX(10deg);}
+    55%{transform:rotateX(20deg);}
+    60%{transform:rotateX(30deg);}
+    65%{transform:rotateX(40deg);}
+    70%{transform:rotateX(50deg);}
+    75%{transform:rotateX(60deg);}
+    80%{transform:rotateX(70deg);}
+    85%{transform:rotateX(80deg);}
+    90%{transform:rotateX(85deg);}
+    95%{transform:rotateX(85deg);}
+    100%{transform:rotateX(85deg);}
+}
+#content{
+    margin-left: 100px;
+    font-size: 16px;
+    font-weight: 800;
+    -webkit-mask-image: -webkit-gradient(linear, 0 0, 0 bottom, from(#000), to(rgba(0, 0, 250, 0)));
+    text-shadow: 1px 1px 1px #000;
+}
