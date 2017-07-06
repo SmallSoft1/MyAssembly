@@ -8,6 +8,9 @@ a{text-decoration: none;color: #000;}
 table,input,select,textarea{ font-family: 'microsoft yahei',Verdana,Arial,Helvetica,sans-serif; outline: none;}
 table tr th{font-weight: 400;}
 select{width: 100px;height: 28px;}
+
+/* 制作兼容的css网址：autoprefixer.github.io */
+
 /* 对于父元素居中 */
 .center-block{display: block;margin-right: auto;margin-left: auto;}
 /* 按钮 */

@@ -84,6 +84,35 @@ function getProBar(obj){
 }
 
 /*
+    根据数据加载同步进行的进度条
+    传入class、宽度width、长度height、边框颜色border、圆角radius、进度条颜色bgColor,时间time
+*/
+function getLoadBar(obj){
+    $(obj.class).css({
+        "width":obj.width,
+        "height":obj.height,
+        "border":obj.border,
+        "borderRadius":obj.radius
+    });
+    $(obj.class).append("<div id='sProBar'></div>");
+    $("#sProBar").css({
+        "width": "0px",
+        "height":obj.height,
+        "background-color": obj.bgColor,
+        "borderRadius":obj.radius
+    });
+    setTimeout(function(){
+        $("#sProBar").animate({width:obj.width},obj.time);
+        $("#sProBar").animate({width:"0px"},obj.time);
+    },0); 
+    document.onreadystatechange = function(){
+        if(document.readyState == "complete"){
+            //你想跳转到的页面
+        }
+    }
+}
+
+/*
     预加载图片
     传入图片链接img
 */

@@ -99,6 +99,31 @@ function getProBar(obj){
 }
 
 /*
+    根据数据加载同步进行的进度条
+    传入大div框id1、小div框id2、宽度width、长度height、边框颜色border、圆角radius、进度条颜色bgColor
+*/
+function getLoadBar(obj){
+    var id1 = doc.getElementById(obj.id1),
+        id2 = doc.getElementById(obj.id2);
+        id1.style.cssText = "width:" + obj.width + ";height:" + obj.height + ";border:" + obj.border + ";border-radius:" + obj.radius ;
+    id2.style.cssText = "width:0px;" + "height:" + obj.height + ";background-color:" + obj.bgColor +";border-radius:" + obj.radius + ";transition-duration:" + obj.time;
+    var a = id1.clientWidth;
+    setTimeout(function(){       
+        for(var i=0; i <= a; i++){
+            id2.style.width = i + "px";
+            if(i == a){
+                i = 0;
+            }
+        }
+    },0)
+    doc.onreadystatechange = function(){
+        if(doc.readyState == "complete"){
+            //你想跳转到的页面
+        }
+    }
+}
+
+/*
     format方法
 */
 function getFormat(){
@@ -162,4 +187,20 @@ function eventDelegation(obj){
             // }
         }
     })
+}
+
+'use strict';
+//初始化状态
+var STATE_INITIAL = 0;
+//开始状态
+var STATE_START = 1;
+//停止状态
+var STATE_STOP = 2;
+/*
+    通用的帧动画库
+*/
+function Animation(){
+    this.taskQueue = [];
+    this.index = 0;
+    this.state = STATE_INITIAL;
 }
