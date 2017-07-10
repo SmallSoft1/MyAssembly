@@ -119,7 +119,7 @@ function getLoadBar(obj){
 function cacheImg(obj){
     var cache = [];
     var args_len = obj.img.length;
-    for(var i = args_len; i--){
+    for(var i = args_len; ;i--){
         var cacheImage = document.createElement('img');
         cacheImage.src = obj.img[i];
         cache.push(cacheImage);
